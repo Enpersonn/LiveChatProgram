@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/ChatRoom.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <h1>You are in ChatRoom <%= room.id %></h1>
+    <header>
+        <h1>You are in ChatRoom <%= room.id %></h1>
+        <hr>
+    </header>
+    <a href="/pages/userList.html">Room List</a>
+    <div id="TextTimeLine">
+
+    </div>
+    <div id="MsgPlace">
+        <input type="text" name="" id="UserMsg">
+        <br>
+        <button id="sendBtn" onclick="sendMsg(document.getElementById('UserMsg').value)">Send</button>
+    </div>
 </body>
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/ChatRoom.js"></script>
 </html>

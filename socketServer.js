@@ -12,7 +12,17 @@ function startSocketServer(server) {
     socket.on('disconnect', () => {
       console.log('A user disconnected');
     });
+
+    socket.on("msgSend", (msg) => {
+      console.log("Server recived msg: ", msg)
+      socket.emit("msgRecive" (msg))
+    })
+
+    socket.on("test", ()=> {
+      console.log("test                   __________")
+    })
   });
+
 }
 
 module.exports = startSocketServer;

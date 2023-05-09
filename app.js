@@ -30,12 +30,12 @@ app.get('/user/:id', (req, res) => {
 });
 
 app.get('/privChatRoom/:id', (req, res) =>{
-
+  const RoomId = req.params.id;
+  const room = {
+    id : RoomId,
+  }
+  res.render('privChatRoom', {room})
 })
-
-
-
-
 
 // Export the app object to be used in index.js
 module.exports = app;

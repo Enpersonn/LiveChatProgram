@@ -1,0 +1,27 @@
+
+
+
+
+
+#TextTimeLine{
+    background-color: rgba(240, 248, 255, 0.295);
+    width: 100%;
+    height: 78vh;
+}
+
+
+#MsgPlace {
+    width: 100%;
+}
+
+#UserMsg {
+    height: 5vh;
+    width: 100%;
+    font-size: 4vh; 
+}
+
+#sendBtn {
+    width: 100%; 
+    height: 6vh;
+    font-size: 3vh;
+}

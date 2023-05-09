@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/userList.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/userList.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,14 +15,29 @@
     </header>
     <table style="width:100%">
         <tr>
-          <th>Name</th>
+          <th>Room-Name</th>
           <th>Id</th>
           <th>Join</th>
+        </tr>
+        <tr>
+          <th><p>Room-Name:  </p><input type="text" name="" id="NewRoomName"></th>
+          <th></th>
+          <th><button onclick="CreateRoom()">Create</button></th>
+        </tr>
+        <tr>
+          <th><p>Test Room</p></th>
+          <th>1</th>
+          <th><button onclick="joinRoom(1)">Join</button></th>
+        </tr>
+        <tr>
+          <th><p>Test Room</p></th>
+          <th>2</th>
+          <th><button onclick="joinRoom(2)">Join</button></th>
         </tr>
       </table>
       
 
 <script src="/socket.io/socket.io.js"></script>
-<script src="./js/socketClient.js"></script>
+<script src="/js/userList.js"></script>
 </body>
 </html>
