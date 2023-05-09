@@ -10,7 +10,9 @@
 </head>
 <body>
     <header>
-        <h1>You are in ChatRoom <%= room.id %></h1>
+        <h1>You are in ChatRoom:</h1> <h1  id="title" data-RoomId="<%= room.id %>"><%= room.id %></h1>
+
+
         <hr>
     </header>
     <a href="/pages/userList.html">Room List</a>
