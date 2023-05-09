@@ -2,6 +2,8 @@ const express = require('express');
 
 const app = express();
 
+
+
 // Set up handlebars engine
 app.set('view engine', 'ejs');
 
@@ -16,6 +18,20 @@ app.get('/', (req, res) => {
 app.get('/userList', (req, res) => {
     res.sendFile(__dirname + '/public/pages/userList.html')
 });
+
+app.get('/user/:id', (req, res) => {
+  const userId = req.params.id;
+  const user = {
+    id: userId,
+    name: 'John Doe',
+    email: 'john.doe@example.com',
+  };
+  res.render('user', { user });
+});
+
+app.get('/privChatRoom/:id', (req, res) =>{
+
+})
 
 
 
